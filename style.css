@@ -1,0 +1,190 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url('./images/background_image.png');
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+
+  /* Fixed background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Place the background behind the content */
+}
+.image-container {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+  z-index: 1; /* Ensure the images are above the background */
+  position: relative; /* Relative to the container */
+  padding: 20px; /* Increase padding to make container larger */
+  height: auto; /* Optional: Adjust height if necessary */
+}
+
+.inline-image {
+  width: 50%; /* Increase width percentage or use a larger fixed width */
+  max-width: 300px; /* Increase max width to allow images to be larger */
+  margin: 10px; /* Increase margin if needed for spacing */
+}
+
+/* Header container styles */
+.header-container {
+  text-align: center;
+  position: relative; /* Positioned above the image container */
+  z-index: 2;
+}
+
+.header-container .display-3 {
+  font-size: 4rem; /* Large text for 'ZERO WASTE' */
+  color: #fff; /* White color for the text */
+  margin-bottom: 0; /* Removes default margin */
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.header-divider {
+  border: 0;
+  height: 3px; /* thickness of the line */
+  background-image: linear-gradient(to right, transparent, #fff, transparent);
+  margin: 10px auto; /* vertical spacing and centering */
+  width: 50%; /* length of the line */
+}
+
+
+.header-container h2 {
+  font-size: 2.5rem; /* Smaller text for 'A LOT OF MONEY' */
+  color: #fff; /* White color for the text */
+  font-weight: lighter; /* Lighter font-weight */
+  margin-top:0px
+}
+
+/* Bootstrap button modifications if needed */
+.btn-success {
+  background-color: #56B48C; /* Bootstrap success green */
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: .75rem 1.5rem; /* Larger padding for a bigger button */
+}
+
+/* Ensure that the button is not hidden behind the fixed background */
+.btn-success:focus,
+.btn-success:active {
+  z-index: 3;
+  position: relative;
+}
+
+/* Responsive adjustments if necessary */
+@media (max-width: 768px) {
+  .header-container .display-3 {
+      font-size: 3rem; /* Smaller font size for smaller screens */
+  }
+
+  .header-container h2 {
+      font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+}
+
+
+/* Style for Modal */
+.modal-button{
+  margin-top: 20px;
+}
+.modal-content {
+  background-color: #423f3f; /* Changing background color to light grey */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px; /* Rounded corners */
+  width: 640px; /* Width of the video */
+  height: 640px; /* Height made equal to the width to make it square */
+  position: fixed; /* Position fixed to stay in place even when scrolling */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust the position to truly center it */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for better visibility */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close {
+  color: white; /* Change the color to white */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ddd; /* Lighter grey on hover for better visibility */
+  text-decoration: none;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* High enough z-index to stay on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.5); /* Black with opacity to dim the background */
+}
+#upcycling-list{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#upcycling-list h3{
+  font-size: 3rem; /* Large text for 'ZERO WASTE' */
+  color: #fff; /* White color for the text */
+  font-family: "Gochi Hand", cursive;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+.list{
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.list img{
+  height:10%;
+  width:10%
+}
+.list-content{
+  width: 80%;
+  height: 10%;
+  background-color:#292828;
+  color:white;
+  font-size: 1.2rem; /* Large text for 'ZERO WASTE' */
+  color: #fff; /* White color for the text */
+  padding-left: 1rem;
+  font-family: "Gochi Hand", cursive;
+  font-style: normal;
+  border-radius:5rem
+}

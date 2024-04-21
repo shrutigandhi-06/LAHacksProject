@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <!-- Add your content here -->
+
+    <div class="container text-white">
+        <div id="loader" style="display:none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center;">
+            <div style="border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 2s linear infinite;"></div>
+        </div>
+        <!-- Header container with text and button -->
+        <div class="header-container text-center mb-5">
+            <h1 class="display-3">Every Little Piece</h1>
+            <hr class="header-divider">
+            <h2>COUNTS.</h2>
+            <button id="openCamera" class="btn btn-success btn-lg mt-4">Capture an Image</button>
+
+            <!-- Modal for Camera -->
+            <div id="cameraModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <video id="video" width="640" height="480" autoplay></video>
+                    <button id="capture" class="btn btn-success btn-lg mt-4 modal-button">Capture Photo</button>
+                </div>
+            </div>
+
+            <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+        </div>
+        <div class="image-container">
+            <img src="./images/Recyclables.png" alt="Image 1" class="inline-image animate__animated recyclable">
+            <img src="./images/Compost.png" alt="Image 2" class="inline-image animate__animated compost">
+            <img src="./images/Trash.png" alt="Image 3" class="inline-image animate__animated trash">
+        </div>
+        <div id="upcycling-list">
+            <h3 style="color: white;">Ways to upcycle <span class="item-name animate__animated">Item name</span></h3>
+            <div class="list">
+                <img src="./images/list1.png" alt="">
+                <div class="list-content"><p class="upcycle-way-1">Use it as a small planter</p></div>
+            </div>
+            <div class="list">
+                <img src="./images/list2.png" alt="">
+                <div class="list-content"><p class="upcycle-way-2">Use it as a small planter</p></div>
+            </div>
+            <div class="list">
+                <img src="./images/list3.png" alt="">
+                <div class="list-content"><p class="upcycle-way-3">Use it as a small planter</p></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
