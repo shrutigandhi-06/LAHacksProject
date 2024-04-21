@@ -17,7 +17,7 @@ def upload_file():
     file = request.files['file']
     if file.filename == '':
         return 'No selected file'
-    file_name = 'images/' + file.filename
+    file_name = 'static/images/' + file.filename
     file.save(file_name)
     item_json = gemini.generate(file_name)
     print(item_json)
